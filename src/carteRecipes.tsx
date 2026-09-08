@@ -26,19 +26,19 @@ interface Recipes {
   prep: number | string;
   cook: number | string;
   image?: string ;
-  dir?: string;
+  
 }
 
  const Carte : Recipes[] = [
 {
  id: 1,
  title: 'Mediterrean Chickkpea Salad',
- description: 'A refreshing protein-packed salad tossed in a lemon-olive oil dressing.',
+ description: 'A refreshing protein-packed salad tossed in a lemon-olive .',
  servings: `Servings: 2 ` ,
  prep: `Prep: 10 mins`,
  cook:`Cook: 0 mins` ,
- image: img1,
- dir: 'left'    
+ image: img1
+   
 
 
   },
@@ -46,24 +46,24 @@ interface Recipes {
  {
  id: 2,
  title: 'Avocado & Tomato Wholegrain Toast',
- description: 'Cremy avocado spread over toasted wholegrain bread, topped with juicy tomatoes.',
+ description: 'Cremy avocado spread over toasted wholegrain bread, topped with juicy.',
  servings:`Servings: 1` ,
  prep:`Prep: 10 mins` ,
  cook: `Cook: 15 mins`,
- image:img2,    
-  dir: 'top'
+ image:img2    
+ 
 
  },
 
  {
  id: 3,
- title: 'One-Pan Lemon Garlic Slamon Whith...',
- description: 'A 15-minute weeknight dinner of flaky salmon and tender asparagus.',
+ title: 'One-Pan Lemon Garlic ...',
+ description: 'A 9 mins weeknight dinner of flaky salmon and  asparagus.',
  servings: `Servings: 2`,
  prep: `Prep: 5 mins`,
  cook: `Cook: 12 mins`,
- image: img3,  
-  dir: 'right'
+ image: img3 
+ 
 
  },
 
@@ -75,7 +75,7 @@ interface Recipes {
  prep: `Prep: 10 mins`,
  cook: `Cook: 15 mins`,
  image: img4,
-  dir: 'left'    
+     
 
 
  },
@@ -83,12 +83,12 @@ interface Recipes {
  {
  id: 5,
  title: 'Sweet Potato Black Bean Tacos',
- description: 'Smoky roasted sweet potatoes and black and beans tucktud into warm tortillas. ',
+ description: 'Smoky roasted  beans tucktud into warm tortillas. ',
  servings: `Servings: 3`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 15 mins`,
- image: img5,
-  dir: 'bottom'   
+ image: img5
+    
 
 
  },
@@ -96,12 +96,12 @@ interface Recipes {
  {
  id: 6,
  title: 'Greek Yogurt Berry Parfait',
- description: 'Layers of creamy yogurt, fresh berries and crunchy oats a high-protein snak.',
+ description: 'Layers of creamy yogurt, fresh berries and crunchy oats .',
  servings: `Servings: 3`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 15 mins`,
- image: img6,
-  dir: 'right'   
+ image: img6
+   
 
 
  },
@@ -113,8 +113,8 @@ interface Recipes {
  servings: `Servings: 4`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 20 mins`,
- image: img7,
-  dir: 'left'   
+ image: img7
+  
 
 
  },
@@ -126,8 +126,8 @@ interface Recipes {
  servings: `Servings: 2`,
  prep: `Prep: 5 mins`,
  cook: `Cook: 10 mins`,
- image: img8,
-  dir: 'bottom'   
+ image: img8
+  
 
 
  },
@@ -139,8 +139,8 @@ interface Recipes {
  servings: `Servings: 5`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 20 mins`,
- image: img9,
-  dir: 'right'  
+ image: img9
+   
 
 
  },

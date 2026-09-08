@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.css'
-import Reveal from './scrool';
+import Reveal from './scrool'
 import gd1 from "./photo/Grand1.png"
 import pt1 from "./photo/Petite1.png"
 import icone from "./Fire.svg"
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className="">
+      <div className="bg-amber-50">
         {/* EN-TÊTE / MENU (Toujours visible) */}
         <section className="mb-4">
           <div className="flex justify-between mr-8 ml-2 items-center">
