@@ -26,7 +26,7 @@ interface Recipes {
   prep: number | string;
   cook: number | string;
   image?: string ;
-  
+  dir: string ;
 }
 
  const Carte : Recipes[] = [
@@ -37,20 +37,21 @@ interface Recipes {
  servings: `Servings: 2 ` ,
  prep: `Prep: 10 mins`,
  cook:`Cook: 0 mins` ,
- image: img1
-   
+ image: img1,
+ dir:'left' 
 
 
   },
 
  {
  id: 2,
- title: 'Avocado & Tomato Wholegrain Toast',
+ title: 'Avocado & Tomato Wholegrain',
  description: 'Cremy avocado spread over toasted wholegrain bread, topped with juicy.',
  servings:`Servings: 1` ,
  prep:`Prep: 10 mins` ,
  cook: `Cook: 15 mins`,
- image:img2    
+ image:img2 ,
+  dir:'top'   
  
 
  },
@@ -62,20 +63,21 @@ interface Recipes {
  servings: `Servings: 2`,
  prep: `Prep: 5 mins`,
  cook: `Cook: 12 mins`,
- image: img3 
+ image: img3 ,
+  dir:'right' 
  
 
  },
 
  {
  id: 4,
- title: 'Quinoa Veggie Power Bowl',
+ title: 'Quinoa Veggie Power Bowl ',
  description: 'A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.',
  servings: `Servings: 2`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 15 mins`,
  image: img4,
-     
+ dir:'left'   
 
 
  },
@@ -87,7 +89,8 @@ interface Recipes {
  servings: `Servings: 3`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 15 mins`,
- image: img5
+ image: img5 ,
+  dir:'bottom'
     
 
 
@@ -100,7 +103,8 @@ interface Recipes {
  servings: `Servings: 3`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 15 mins`,
- image: img6
+ image: img6 ,
+  dir:'right'
    
 
 
@@ -113,7 +117,8 @@ interface Recipes {
  servings: `Servings: 4`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 20 mins`,
- image: img7
+ image: img7 ,
+  dir:'left'
   
 
 
@@ -126,7 +131,8 @@ interface Recipes {
  servings: `Servings: 2`,
  prep: `Prep: 5 mins`,
  cook: `Cook: 10 mins`,
- image: img8
+ image: img8 ,
+  dir:'bottom'
   
 
 
@@ -135,11 +141,12 @@ interface Recipes {
  {
  id: 9,
  title: 'Creamy Tomato Basil Soup',
- description: 'Rich and velvety tomato soup infused with fresh basil, perfect for a cozy meal.',
+ description: 'Rich and velvety tomato soup infused with fresh basil, perfect for a  meal.',
  servings: `Servings: 5`,
  prep: `Prep: 10 mins`,
  cook: `Cook: 20 mins`,
- image: img9
+ image: img9 ,
+  dir:'right'
    
 
 

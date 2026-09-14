@@ -18,15 +18,15 @@ function App() {
     <>
       <div className="bg-amber-50">
         {/* EN-TÊTE / MENU (Toujours visible) */}
-        <section className="mb-4">
-          <div className="flex justify-between mr-8 ml-2 items-center">
+        <section className="">
+          <div className=" lg:flex lg:justify-between ">
             <Reveal direction="left">
-              <h1 className='text-emerald-900 text-2xl font-bold m-3 antialiased flex cursor-pointer' onClick={() => setShowRecipes(false)}>
-                <img src={icone} alt="Fire Icon" className="w-8 h-8 text-2xl"/> Healthy Recipe Finder
+              <h1 className='text-emerald-900 text-2xl font-bold m-3 antialiased  cursor-pointer flex justify-self-center' onClick={() => setShowRecipes(false)}>
+                <img src={icone} alt="Fire Icon" className="w-8 h-8 text-2xl "/>  Recipe Finder
               </h1>
             </Reveal>
 
-            <ul className='flex justify-center items-center gap-6 text-emerald-950 m-3 font-semibold'>
+            <ul className='flex justify-center invisible lg:visible text-emerald-900 items-center  gap-x-12 lg:ml-34   m-3 font-semibold min-[375px]:ml-10   '>
               <Reveal direction='left'>
                 <li>
                   <button 
@@ -48,23 +48,24 @@ function App() {
                 <li>
                   <button 
                     onClick={() => setShowRecipes(true)} 
-                    className='hover:underline hover:decoration-amber-500 hover:underline-offset-2 hover:decoration-2 bg-transparent border-none cursor-pointer text-inherit font-inherit'
+                    className='hover:underline hover:decoration-amber-500 hover:underline-offset-2 hover:decoration-2 bg-transparent border-none cursor-pointer text-inherit font-inherit   '
                   >
                     Recipes
                   </button>
                 </li>
               </Reveal>
             </ul>
+            <hr className='text-gray-300 lg:invisible'/>
 
             <Reveal direction='right'>
               <button onClick={() => setShowRecipes(true)} 
-                className='font-semibold ml-5 px-4 py-2 text-white border-emerald-950 border-2 rounded-2xl bg-emerald-950 hover:bg-white hover:text-emerald-900 hover:rotate-2 transition-transform duration-300 cursor-pointer'>
+                className=' invisible lg:visible lg:mt-1.5 lg:mr-1.5 font-semibold flex justify-self-center px-4 py-2 text-white border-emerald-950 border-2 rounded-2xl bg-emerald-950 hover:bg-white hover:text-emerald-900 hover:rotate-2 transition-transform duration-300 cursor-pointer  '>
                 Browse recipes
               </button>
             </Reveal>
           </div>
         </section>
-        <hr className="text-gray-300"/>
+        <hr className="text-gray-300 lg:invisible"/>
 
         {/* --- PAGE PRINCIPALE (HOME) --- */}
         {!showRecipes ? (
@@ -72,10 +73,10 @@ function App() {
             <section className='flex justify-center items-center mb-5 mt-2 text-emerald-900'>
               <div>
                 <Reveal direction='top'>
-                  <h1 className="font-bold text-center text-6xl mb-2 mt-7 antialiased">Healthy meals,zero fuss</h1>
+                  <h1 className="font-bold text-center text-6xl mb-2 mt-7 antialiased min-[375px]:text-2xl lg:text-5xl ">Healthy meals,zero fuss</h1>
                 </Reveal>
                 <Reveal direction='bottom'>
-                  <p className="text-center antialiased">Discover eight quick, whole-food recipes that you can cook tonight</p>
+                  <p className="text-center antialiased">Discover eight quick, whole-food recipes that can cook <br /> you tonight</p>
                   <p className='text-center antialiased'>--no processed junk, no guesswork</p>
                   <button 
                     onClick={() => setShowRecipes(true)} 
@@ -98,7 +99,7 @@ function App() {
                 <Reveal direction='top'>
                   <h1 className="text-center m-7 text-3xl font-bold text-emerald-900 antialiased">What you'll get</h1>
                 </Reveal>
-                <div className='flex text-emerald-900 justify-between gap-x-2 mb-10 antialiased'>
+                <div className=' text-emerald-900 sm:gap-2 sm:grid-cols-2 mb-10 antialiased grid  xl:flex xl:justify-between  '>
                   <div>
                     <Reveal direction='left'>
                       <p className='hover:scale-105 transition-transform duration-300 '>
@@ -108,9 +109,9 @@ function App() {
                       <p>Each dish uses ereryday, unprocessed <br /> <span>ingredients.</span></p>
                     </Reveal>
                   </div>
-                  <div>
+                  <div className="">
                     <Reveal direction='bottom'>
-                      <p className='hover:scale-105 transition-transform duration-300'>
+                      <p className='hover:scale-105 transition-transform duration-300 '>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="green" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>
                       </p>
                       <h1 className='font-bold mt-2.5'>Minimum fuss</h1>
@@ -119,7 +120,7 @@ function App() {
                   </div>
                   <div>
                     <Reveal direction='right'>
-                      <p className='hover:scale-105 transition-transform duration-300'>
+                      <p className='hover:scale-105 transition-transform duration-300 '>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="blue" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                       </p>
                       <h1 className='font-bold mt-2.5'>Seach in seconds</h1>
@@ -131,18 +132,18 @@ function App() {
               </section>
 
               <section className='mt-10'>
-                <div className="flex gap-x-0 text-emerald-900 antialiased">
+                <div className=" gap-x-0 text-emerald-900 antialiased grid xl:flex  ">
                   <div className="items-center flex">
                     <Reveal direction='left'>
                       <span><Reveal direction='top'><h1 className='mb-4 font-bold text-3xl leading-tight'>Bult for real life</h1></Reveal></span>
                       <p>Cooking shouldn't be complicated. These recipes come in <br /> <span>under 30 minutes of active time, fit busy shedules, and</span> <br /> taste good enough to repeat.</p>
-                      <br /><br />
+                      <br />
                       <p>whether you're new to the kitchen or just need fresh <br /> <span>ideas, we've got you covered.</span></p>
                     </Reveal>
                   </div> 
                   <div>
                     <Reveal direction='right'>
-                      <img src={pt1} alt="" className="w-10/12 h-5/12 float-end rounded-2xl hover:scale-105 transition-transform duration-300 ant" />
+                      <img src={pt1} alt="" className="mt-4 h-5/12 xl:max-w-10/12 float-end rounded-2xl hover:scale-105 transition-transform duration-300 ant " />
                     </Reveal>
                   </div>
                 </div>
@@ -150,10 +151,10 @@ function App() {
 
               <br /><br />
 
-              <section className='h-52 mb-15 bg-green-100 text-emerald-900'>
+              <section className=' mb-15 pb-5  bg-green-100 text-emerald-900'>
                 <div className="flex justify-between items-center pt-10">
                   <div>
-                    <Reveal direction='left'><img src={fork} alt="" className='w-30 h-30 float-start mr-3'/></Reveal>
+                    <Reveal direction='left'><img src={fork} alt="" className="w-30 h-30 float-start mr-3 min-[375px]:invisible min-[360px]:invisible  lg:visible max-2xl:visible"/></Reveal>
                   </div>
                   <div>
                     <Reveal direction='top'><h1 className='text-center antialiased font-bold text-3xl mb-3.5'>Ready to cook smarther?</h1></Reveal>
@@ -168,7 +169,7 @@ function App() {
                     </Reveal>
                   </div>
                   <div>
-                    <Reveal direction='right'><img src={cookie} alt="" className='w-30 h-30 float-end ml-3'/></Reveal>
+                    <Reveal direction='right'><img src={cookie} alt="" className='w-30 h-30 float-end ml-3 min-[375px]:invisible min-[360px]:invisible lg:visible max-2xl:visible  '/></Reveal>
                   </div>
                 </div>
               </section>
