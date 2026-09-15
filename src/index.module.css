@@ -1,6 +1,9 @@
 
-
  .cart {
 background: white;
+box-shadow: inset 1px 3px  10px black;
 
+ }
+ .box:hover {
+    box-shadow: inset 0px 0px 10px black;
  }

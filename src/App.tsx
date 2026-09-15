@@ -10,6 +10,7 @@ import tik from "./tic-tac.png"
 import cookie from "./Cooking with auberigne.svg"
 import fork from "./Fork and Knife.svg"
 import Recipes from "./Recipes"
+import style from "./index.module.css"
 
 function App() {
   const [showRecipes, setShowRecipes] = useState(false);
@@ -21,7 +22,7 @@ function App() {
         <section className="">
           <div className=" lg:flex lg:justify-between ">
             <Reveal direction="left">
-              <h1 className='text-emerald-900 text-2xl font-bold m-3 antialiased  cursor-pointer flex justify-self-center' onClick={() => setShowRecipes(false)}>
+              <h1 className='text-emerald-900 text-2xl font-bold m-3 antialiased  cursor-pointer flex justify-self-center hover:scale-105 transition-transform duration-300' onClick={() => setShowRecipes(false)}>
                 <img src={icone} alt="Fire Icon" className="w-8 h-8 text-2xl "/>  Recipe Finder
               </h1>
             </Reveal>
@@ -59,7 +60,7 @@ function App() {
 
             <Reveal direction='right'>
               <button onClick={() => setShowRecipes(true)} 
-                className=' invisible lg:visible lg:mt-1.5 lg:mr-1.5 font-semibold flex justify-self-center px-4 py-2 text-white border-emerald-950 border-2 rounded-2xl bg-emerald-950 hover:bg-white hover:text-emerald-900 hover:rotate-2 transition-transform duration-300 cursor-pointer  '>
+                className={`${style.box} invisible lg:visible lg:mt-1.5 lg:mr-1.5 font-semibold flex justify-self-center px-4 py-2 text-white border-emerald-950 border-2 rounded-2xl bg-emerald-900 hover:bg-amber-50 hover:text-emerald-900 hover:rotate-2 transition-transform duration-300 cursor-pointer  ` }>
                 Browse recipes
               </button>
             </Reveal>
@@ -80,7 +81,7 @@ function App() {
                   <p className='text-center antialiased'>--no processed junk, no guesswork</p>
                   <button 
                     onClick={() => setShowRecipes(true)} 
-                    className="m-3.5 justify-self-center flex border-2 rounded-2xl px-2.5 py-2 text-white bg-emerald-950 antialiased hover:bg-white hover:text-black font-semibold hover:rotate-2 transition-transform duration-300 cursor-pointer"
+                    className={`${style.box} m-3.5 justify-self-center flex border-2 rounded-2xl px-2.5 py-2 text-white bg-emerald-900 antialiased hover:bg-amber-50 hover:text-black font-semibold hover:rotate-2 transition-transform duration-300 cursor-pointer `}
                   >
                     start exploring
                   </button>

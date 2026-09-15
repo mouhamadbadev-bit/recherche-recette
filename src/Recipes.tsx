@@ -4,9 +4,19 @@ import style from  "./index.module.css"
 import papilon from "./papillon.png"
 import inta from "./instagram.png"
 import tik from "./tic-tac.png"
-
+import MyInput from "./input.tsx";
+import { useState } from "react";
 
 function Recipes() {
+
+  const [search, setSearche] = useState<string>("");
+
+  const handleSearch = (e:string) => {
+    setSearche(e.toLowerCase());
+  };
+const filtre = Carte.filter((e)=>e.title?.includes(search) )
+  //filtrage 
+
   return (
   <>
   <div>
@@ -21,6 +31,10 @@ function Recipes() {
   </div>
   </section>
 
+  <div>
+ <MyInput onSearch={handleSearch}/>
+  </div>
+
   <section>
     <div>
       <div>
@@ -33,12 +47,12 @@ function Recipes() {
     
   </section>
 
-  <section className=" lg:grid lg:grid-cols-3  ">
+  <section className=" sm:grid-cols-2 sm:grid xl:grid-cols-3  ">
  
- {Carte.map((e)=>
-    <Reveal key={e.id}  direction="dir">
-   <div className=" flex justify-center  mb-3 ">
-    <div className={`${style.cart}  w-9/12 max-h-2/6   p-1 rounded-2xl  text-emerald-900 `}>
+ {filtre.map((e)=>
+    <Reveal key={e.id}>
+   <div className=" flex justify-center    mb-3 ">
+    <div className={`${style.cart}  w-9/12 max-h-2/6   p-1 rounded-2xl  text-emerald-900  hover:scale-105 transition-transform duration-300`}>
     <img src={e.image} alt={e.title} className="w-full h rounded-2xl " />  
     <h1 className="  my-1.5 font-bold ml-0.5">{e.title}</h1>
     <p className="mb-1.5">{e.description} </p>

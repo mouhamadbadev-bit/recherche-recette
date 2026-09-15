@@ -20,13 +20,13 @@ import img9 from "./photo/Gemini9.png"
 
 interface Recipes {
   id: number;
-  title?: string ;
+  title: string ;
   description: string;
   servings: string | number;
   prep: number | string;
   cook: number | string;
   image?: string ;
-  dir: string ;
+ 
 }
 
  const Carte : Recipes[] = [
@@ -35,10 +35,10 @@ interface Recipes {
  title: 'Mediterrean Chickkpea Salad',
  description: 'A refreshing protein-packed salad tossed in a lemon-olive .',
  servings: `Servings: 2 ` ,
- prep: `Prep: 10 mins`,
- cook:`Cook: 0 mins` ,
+ prep: `Prep: 5 mins`,
+ cook:`Cook: 25 mins` ,
  image: img1,
- dir:'left' 
+
 
 
   },
@@ -48,10 +48,10 @@ interface Recipes {
  title: 'Avocado & Tomato Wholegrain',
  description: 'Cremy avocado spread over toasted wholegrain bread, topped with juicy.',
  servings:`Servings: 1` ,
- prep:`Prep: 10 mins` ,
+ prep:`Prep: 5 mins` ,
  cook: `Cook: 15 mins`,
  image:img2 ,
-  dir:'top'   
+   
  
 
  },
@@ -63,8 +63,8 @@ interface Recipes {
  servings: `Servings: 2`,
  prep: `Prep: 5 mins`,
  cook: `Cook: 12 mins`,
- image: img3 ,
-  dir:'right' 
+ image: img3 
+ 
  
 
  },
@@ -74,10 +74,10 @@ interface Recipes {
  title: 'Quinoa Veggie Power Bowl ',
  description: 'A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.',
  servings: `Servings: 2`,
- prep: `Prep: 10 mins`,
+ prep: `Prep: 6 mins`,
  cook: `Cook: 15 mins`,
- image: img4,
- dir:'left'   
+ image: img4
+  
 
 
  },
@@ -87,10 +87,10 @@ interface Recipes {
  title: 'Sweet Potato Black Bean Tacos',
  description: 'Smoky roasted  beans tucktud into warm tortillas. ',
  servings: `Servings: 3`,
- prep: `Prep: 10 mins`,
+ prep: `Prep: 4 mins`,
  cook: `Cook: 15 mins`,
- image: img5 ,
-  dir:'bottom'
+ image: img5 
+ 
     
 
 
@@ -99,12 +99,12 @@ interface Recipes {
  {
  id: 6,
  title: 'Greek Yogurt Berry Parfait',
- description: 'Layers of creamy yogurt, fresh berries and crunchy oats .',
+ description: 'Layers of creamy yogurt, fresh berries and crunchy oats thank you.',
  servings: `Servings: 3`,
- prep: `Prep: 10 mins`,
+ prep: `Prep: 8 mins`,
  cook: `Cook: 15 mins`,
- image: img6 ,
-  dir:'right'
+ image: img6 
+
    
 
 
@@ -115,10 +115,10 @@ interface Recipes {
  title: 'Lentil & Spinach Soup',
  description: 'A hearty 30-minute soup rich in plant protein and iron.',
  servings: `Servings: 4`,
- prep: `Prep: 10 mins`,
+ prep: `Prep: 7 mins`,
  cook: `Cook: 20 mins`,
- image: img7 ,
-  dir:'left'
+ image: img7 
+
   
 
 
@@ -131,8 +131,8 @@ interface Recipes {
  servings: `Servings: 2`,
  prep: `Prep: 5 mins`,
  cook: `Cook: 10 mins`,
- image: img8 ,
-  dir:'bottom'
+ image: img8 
+  
   
 
 
@@ -143,10 +143,10 @@ interface Recipes {
  title: 'Creamy Tomato Basil Soup',
  description: 'Rich and velvety tomato soup infused with fresh basil, perfect for a  meal.',
  servings: `Servings: 5`,
- prep: `Prep: 10 mins`,
+ prep: `Prep: 9 mins`,
  cook: `Cook: 20 mins`,
- image: img9 ,
-  dir:'right'
+ image: img9 
+
    
 
 
